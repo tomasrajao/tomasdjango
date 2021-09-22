@@ -4,11 +4,52 @@
 #
 #    pip-compile requirements-dev.in
 #
+asgiref==3.4.1
+    # via django
+attrs==21.2.0
+    # via pytest
+certifi==2021.5.30
+    # via requests
+charset-normalizer==2.0.6
+    # via requests
+django==3.2.7
+    # via -r requirements.in
 flake8==3.9.2
     # via -r requirements-dev.in
+gunicorn==20.1.0
+    # via -r requirements.in
+idna==3.2
+    # via requests
+iniconfig==1.1.1
+    # via pytest
 mccabe==0.6.1
     # via flake8
+packaging==21.0
+    # via pytest
+pluggy==1.0.0
+    # via pytest
+py==1.10.0
+    # via pytest
 pycodestyle==2.7.0
     # via flake8
 pyflakes==2.3.1
     # via flake8
+pyparsing==2.4.7
+    # via packaging
+pytest==6.2.5
+    # via pytest-django
+pytest-django==4.4.0
+    # via -r requirements-dev.in
+pytz==2021.1
+    # via django
+requests==2.26.0
+    # via -r requirements.in
+sqlparse==0.4.2
+    # via django
+toml==0.10.2
+    # via pytest
+urllib3==1.26.6
+    # via requests
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
