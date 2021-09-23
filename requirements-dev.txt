@@ -8,6 +8,12 @@ asgiref==3.4.1
     # via django
 attrs==21.2.0
     # via pytest
+boto3==1.18.46
+    # via django-s3-folder-storage
+botocore==1.21.46
+    # via
+    #   boto3
+    #   s3transfer
 certifi==2021.5.30
     # via requests
 charset-normalizer==2.0.6
@@ -21,7 +27,13 @@ coverage==5.5
 dj-database-url==0.5.0
     # via -r requirements.in
 django==3.2.7
+    # via
+    #   -r requirements.in
+    #   django-storages
+django-s3-folder-storage==0.5
     # via -r requirements.in
+django-storages==1.11.1
+    # via django-s3-folder-storage
 flake8==3.9.2
     # via -r requirements-dev.in
 gunicorn==20.1.0
@@ -30,6 +42,10 @@ idna==3.2
     # via requests
 iniconfig==1.1.1
     # via pytest
+jmespath==0.10.0
+    # via
+    #   boto3
+    #   botocore
 mccabe==0.6.1
     # via flake8
 packaging==21.0
@@ -54,6 +70,8 @@ pytest-cov==2.12.1
     # via -r requirements-dev.in
 pytest-django==4.4.0
     # via -r requirements-dev.in
+python-dateutil==2.8.2
+    # via botocore
 python-decouple==3.4
     # via -r requirements.in
 pytz==2021.1
@@ -62,6 +80,10 @@ requests==2.26.0
     # via
     #   -r requirements.in
     #   codecov
+s3transfer==0.5.0
+    # via boto3
+six==1.16.0
+    # via python-dateutil
 sqlparse==0.4.2
     # via django
 toml==0.10.2
@@ -69,7 +91,9 @@ toml==0.10.2
     #   pytest
     #   pytest-cov
 urllib3==1.26.7
-    # via requests
+    # via
+    #   botocore
+    #   requests
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
