@@ -16,16 +16,21 @@ certifi==2021.5.30
     # via requests
 charset-normalizer==2.0.6
     # via requests
+collectfast==2.2.0
+    # via -r requirements.in
 dj-database-url==0.5.0
     # via -r requirements.in
 django==3.2.7
     # via
     #   -r requirements.in
+    #   collectfast
     #   django-storages
 django-s3-folder-storage==0.5
     # via -r requirements.in
 django-storages==1.11.1
-    # via django-s3-folder-storage
+    # via
+    #   collectfast
+    #   django-s3-folder-storage
 gunicorn==20.1.0
     # via -r requirements.in
 idna==3.2
@@ -50,6 +55,8 @@ six==1.16.0
     # via python-dateutil
 sqlparse==0.4.2
     # via django
+typing-extensions==3.10.0.2
+    # via collectfast
 urllib3==1.26.7
     # via
     #   botocore

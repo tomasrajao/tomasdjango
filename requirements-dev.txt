@@ -20,6 +20,8 @@ charset-normalizer==2.0.6
     # via requests
 codecov==2.1.12
     # via -r requirements-dev.in
+collectfast==2.2.0
+    # via -r requirements.in
 coverage==5.5
     # via
     #   codecov
@@ -29,11 +31,14 @@ dj-database-url==0.5.0
 django==3.2.7
     # via
     #   -r requirements.in
+    #   collectfast
     #   django-storages
 django-s3-folder-storage==0.5
     # via -r requirements.in
 django-storages==1.11.1
-    # via django-s3-folder-storage
+    # via
+    #   collectfast
+    #   django-s3-folder-storage
 flake8==3.9.2
     # via -r requirements-dev.in
 gunicorn==20.1.0
@@ -90,6 +95,8 @@ toml==0.10.2
     # via
     #   pytest
     #   pytest-cov
+typing-extensions==3.10.0.2
+    # via collectfast
 urllib3==1.26.7
     # via
     #   botocore
