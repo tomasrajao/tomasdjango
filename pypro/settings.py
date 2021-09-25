@@ -34,7 +34,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
 
-COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
 AUTH_USER_MODEL = 'base.User'
 
@@ -149,6 +148,7 @@ if AWS_ACCESS_KEY_ID and not DEBUG:
     AWS_QUERYSTRING_AUTH = False
 
     COLLECTFAST_ENABLED = True
+    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
     AWS_DEFAULT_ACL = None
 
