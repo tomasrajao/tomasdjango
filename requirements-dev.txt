@@ -8,7 +8,7 @@ asgiref==3.4.1
     # via django
 attrs==21.2.0
     # via pytest
-boto3==1.18.46
+boto3==1.18.48
     # via django-s3-folder-storage
 botocore==1.21.46
     # via
