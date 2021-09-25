@@ -145,7 +145,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
-    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = True
 
     COLLECTFAST_ENABLED = True
     COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
