@@ -1,1 +1,16 @@
-# Empty CSS file for your own CSS
+.jumbotron{
+    background-color: #ececec;
+    padding: 3rem !important;
+    margin-bottom: 1.5rem !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 0.3rem !important;
+}
+
+.main-footer{
+    background-color: #33ccff;
+}
+
+.rights{
+    background-color: #03befc;
+}
+
