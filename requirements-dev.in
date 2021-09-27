@@ -3,4 +3,3 @@ flake8
 pytest-django
 pytest-cov
 codecov
-sentry-sdk
