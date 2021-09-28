@@ -22,6 +22,7 @@ from pypro.base.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pypro.base.urls')),
+    path('aperitivos/', include('pypro.aperitivos.urls')),
 ]
 
 if settings.DEBUG:
