@@ -1,6 +1,4 @@
 import pytest
-from django.contrib.sites import requests
-from django.http import HttpResponse
 from django.urls import reverse
 
 from pypro.django_assertions import assert_contains, assert_not_contains
@@ -23,6 +21,6 @@ def test_title(resp):
 def test_home_link(resp):
     assert_contains(resp, f'href="{reverse("base:home")}">Python Pro')
 
+
 def test_lorem_ipsum(resp):
     assert_not_contains(resp, 'Lorem ipsum')
-

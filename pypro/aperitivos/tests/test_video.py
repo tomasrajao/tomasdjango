@@ -9,6 +9,7 @@ def resp(client):
     resp = client.get(reverse('aperitivos:video', args=('motivacao',)))
     return resp
 
+
 def test_status_code(resp):
     assert resp.status_code == 200
 
@@ -18,4 +19,4 @@ def test_titulo_video(resp):
 
 
 def test_conteudo_video(resp):
-    assert_contains(resp, '<iframe src="https://player.vimeo.com/video/576473838')
+    assert_contains(resp, '<iframe src="https://player.vimeo.com/video/574703144')
