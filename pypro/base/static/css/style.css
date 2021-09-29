@@ -14,3 +14,17 @@
     background-color: #03befc;
 }
 
+.navbar-brand{
+  color: #eee !important;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #ddd !important;
+}
+
+.nav-link{
+  color: #eee;
+}
+.nav-link:hover, .nav-link:focus {
+  color: #ddd;
+}
