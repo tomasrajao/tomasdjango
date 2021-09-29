@@ -22,5 +22,9 @@ def test_home_link(resp):
     assert_contains(resp, f'href="{reverse("base:home")}">Python Pro')
 
 
+def test_email_link(resp):
+    assert_contains(resp, 'href="mailto:ramalho@python.pro.br"')
+
+
 def test_lorem_ipsum(resp):
     assert_not_contains(resp, 'Lorem ipsum')
