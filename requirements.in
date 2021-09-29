@@ -8,3 +8,4 @@ django-s3-folder-storage
 Collectfast
 django-debug-toolbar
 sentry-sdk
+django-ordered-model
