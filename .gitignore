@@ -131,3 +131,6 @@ dmypy.json
 # Static files
 staticfiles
 mediafiles
+
+# Postgresql files
+.pgdata
