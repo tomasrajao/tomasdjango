@@ -15,16 +15,26 @@
 }
 
 .navbar-brand{
-  color: #eee !important;
+    color: #eee !important;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
-  color: #ddd !important;
+    color: #ddd !important;
 }
 
 .nav-link{
-  color: #eee;
+    color: #eee;
 }
 .nav-link:hover, .nav-link:focus {
-  color: #ddd;
+    color: #ddd;
+}
+
+.dropdown-divider{
+    color: #eee;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #eee;
+  text-decoration: none;
+  background-color: #33ccff;
 }
