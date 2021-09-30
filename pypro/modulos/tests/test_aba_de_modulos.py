@@ -1,5 +1,4 @@
 import pytest
-from django.test import TestCase
 
 # Create your tests here.
 from django.urls import reverse
@@ -23,3 +22,8 @@ def resp(client, modulos):
 def test_titulos_dos_modulos(resp, modulos):
     for modulo in modulos:
         assert_contains(resp, modulo.titulo)
+
+
+def test_links_dos_modulos(resp, modulos):
+    for modulo in modulos:
+        assert_contains(resp, modulo.get_absolute_url())
