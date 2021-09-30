@@ -19,7 +19,7 @@
             <h2 style=" ">Aulas</h2>
             <ol>
                 {% for aula in aulas %}
-                <li href="{{aula.get_absolute_url}}">{{ aula.titulo }}</li>
+                <li><a href="{{aula.get_absolute_url}}">{{ aula.titulo }}</a></li>
                 {% endfor %}
             </ol>
         </div>
