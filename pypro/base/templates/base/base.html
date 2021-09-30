@@ -24,19 +24,24 @@
     <div class="row">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
-            <li class="nav-item dropdown">
+            <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                    aria-expanded="false">
                     Módulos
                 </a>
-                {% for modulo in MODULOS %}
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">{{ modulo.titulo }}</a></li>
+                    {% for modulo in MODULOS %}
+                    {% if modulo.order >= 1 %}
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    {% endif %}
+                    <li><a class="dropdown-item" href="{{modulo.get_absolute_url}}">{{ modulo.titulo }}</a></li>
+                    {% empty %}
+                    <li class="ms-3">Não há nada</li>
+                    {% endfor %}
                 </ul>
-                {% empty %}
-                <spam>Não há vídeos listados</spam>
-                {% endfor %}
-            </li>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto"></ul>
 
