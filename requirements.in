@@ -9,3 +9,5 @@ Collectfast
 django-debug-toolbar
 sentry-sdk
 django-ordered-model
+ipython
+django-extensions
