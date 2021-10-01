@@ -28,3 +28,7 @@ def test_email_link(resp):
 
 def test_lorem_ipsum(resp):
     assert_not_contains(resp, 'Lorem ipsum')
+
+
+def test_link_modulo(resp):
+    assert_contains(resp, f'href="{reverse("modulos:indice")}"')
