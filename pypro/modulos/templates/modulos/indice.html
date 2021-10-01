@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}{{ modulo.titulo }}{% endblock title %}
+{% block description %}Página com detalhes do modulo {{ modulo.titulo }}{% endblock description %}
+
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for modulo in modulos %}
+        <div class="col-md-12">
+            <h1 style="margin-bottom:3%;margin-top:3%">{{ modulo.titulo }}</h1>
+            <dl>
+                <dt>Público</dt>
+                <dd>{{ modulo.publico }}</dd>
+
+                <dt>Descrição</dt>
+                <dd>{{ modulo.descricao }}</dd>
+            </dl>
+            <h2 style="margin-top:1rem">Aulas</h2>
+            <ol>
+                {% for aula in modulo.aulas %}
+                <li><a href="{{aula.get_absolute_url}}">{{ aula.titulo }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+{% endblock body %}
