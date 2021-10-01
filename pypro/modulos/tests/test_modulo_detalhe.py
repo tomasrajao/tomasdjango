@@ -45,3 +45,11 @@ def test_titulos_aulas(resp, aulas):
 def test_link_aulas(resp, aulas):
     for aula in aulas:
         assert_contains(resp, aula.get_absolute_url())
+
+
+def test_breadcrumb_modulos(resp, modulo: Modulo):
+    assert_contains(resp, f'li class="breadcrumb-item active" aria-current="page">{modulo.titulo}')
+
+
+def test_breadcrumb_link(resp):
+    assert_contains(resp, f'<li class="breadcrumb-item"><a href="{reverse("modulos:indice")}')
