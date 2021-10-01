@@ -9,5 +9,7 @@ def detalhe(request, slug):
     aulas = facade.listar_aulas_de_modulo_ordenadas(modulo)
     return render(request, 'modulos/modulo_detalhe.html', {'modulo': modulo, 'aulas': aulas})
 
+
 def aula(request, slug):
-    pass
+    aula = facade.encontrar_aula(slug)
+    return render(request, 'modulos/aula_detalhe.html', {'aula': aula})
