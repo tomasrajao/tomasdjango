@@ -23,7 +23,7 @@ class Matricula(models.Model):
     data = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ['turma', 'usuario']
+        unique_together = ['usuario', 'turma']
         ordering = ['turma', 'data']
 
     def __str__(self):
