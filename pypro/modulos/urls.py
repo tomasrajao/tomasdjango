@@ -3,7 +3,6 @@ from django.urls import path
 from pypro.modulos import views
 from pypro.modulos.models import Modulo
 
-
 app_name = 'modulos'
 urlpatterns = [
     path('', views.indice, name='indice'),
