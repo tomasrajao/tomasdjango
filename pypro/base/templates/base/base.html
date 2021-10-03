@@ -24,30 +24,45 @@
     <div class="row">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="{% url 'modulos:indice' %}" id="navbarDropdown" role="button" data-bs-toggle="none"
-                   aria-expanded="false">
-                    Módulos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    {% for modulo in MODULOS %}
-                    {% if modulo.order >= 1 %}
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    {% endif %}
-                    <li><a class="dropdown-item" href="{{modulo.get_absolute_url}}">{{ modulo.titulo }}</a></li>
-                    {% empty %}
-                    <li class="ms-3">Não há nada</li>
-                    {% endfor %}
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url 'modulos:indice' %}" id="navbarDropdown"
+                       role="button" data-bs-toggle="none"
+                       aria-expanded="false">
+                        Módulos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for modulo in MODULOS %}
+                        {% if modulo.order >= 1 %}
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        {% endif %}
+                        <li><a class="dropdown-item" href="{{modulo.get_absolute_url}}">{{ modulo.titulo }}</a></li>
+                        {% empty %}
+                        <li class="ms-3">Não há nada</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mr-auto"></ul>
 
+            {% if not user.is_authenticated %}
+            <a class="btn btn-light my-2 md-2" href="{% url 'login'%}">Entrar</a>
+            {% else %}
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                   role="button" data-toggle="dropdown"
+                   aria-expanded="false">
+                    Olá, {{ user.first_name }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <button type="button" class="dropdown-item" href="{% url 'login'%}">Sair</button>
+                </div>
             </div>
-        </nav>
+            {% endif %}
     </div>
+    </nav>
+</div>
 </div>
 
 {% block body %}{% endblock body %}
