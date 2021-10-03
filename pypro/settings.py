@@ -40,6 +40,8 @@ AUTH_USER_MODEL = 'base.User'
 
 LOGIN_REDIRECT_URL = '/modulos/'
 
+LOGOUT_REDIRECT_URL = '/'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
