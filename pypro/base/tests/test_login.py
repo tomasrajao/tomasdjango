@@ -40,7 +40,7 @@ def resp_home(client, db):
 
 
 def test_botao_login_disponivel(resp_home):
-    assert_contains(resp_home, f'Entrar')
+    assert_contains(resp_home, 'Entrar')
 
 
 def test_link_login_disponivel(resp_home):
@@ -56,13 +56,13 @@ def test_botao_login_indisponivel(resp_home_com_usuario_logado):
     assert_not_contains(resp_home_com_usuario_logado, 'Entrar')
 
 
-
 def test_link_login_indisponivel(resp_home_com_usuario_logado):
     assert_not_contains(resp_home_com_usuario_logado, reverse('login'))
 
 
 def test_botao_sair_disponivel(resp_home_com_usuario_logado):
     assert_contains(resp_home_com_usuario_logado, 'Sair')
+
 
 def test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):
     assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)
