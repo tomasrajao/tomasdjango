@@ -42,7 +42,7 @@ django==3.2.7
     #   django-extensions
     #   django-storages
     #   model-bakery
-django-debug-toolbar==3.2.2
+django-debug-toolbar==3.2.3
     # via -r requirements.in
 django-extensions==3.1.3
     # via -r requirements.in
