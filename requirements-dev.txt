@@ -30,7 +30,7 @@ coverage==5.5
     # via
     #   codecov
     #   pytest-cov
-decorator==5.1.0
+decorator==5.1.1
     # via ipython
 dj-database-url==0.5.0
     # via -r requirements.in
