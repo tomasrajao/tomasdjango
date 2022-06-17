@@ -53,7 +53,7 @@ ipython==7.28.0
     # via -r requirements.in
 jedi==0.18.0
     # via ipython
-jmespath==0.10.0
+jmespath==1.0.1
     # via
     #   boto3
     #   botocore
