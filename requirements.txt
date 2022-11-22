@@ -51,7 +51,7 @@ idna==3.2
     # via requests
 ipython==7.28.0
     # via -r requirements.in
-jedi==0.18.0
+jedi==0.18.2
     # via ipython
 jmespath==0.10.0
     # via
