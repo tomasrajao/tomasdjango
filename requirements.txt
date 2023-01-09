@@ -91,7 +91,7 @@ sqlparse==0.4.2
     # via
     #   django
     #   django-debug-toolbar
-traitlets==5.1.0
+traitlets==5.8.1
     # via
     #   ipython
     #   matplotlib-inline
