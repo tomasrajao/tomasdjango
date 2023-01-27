@@ -49,7 +49,7 @@ gunicorn==20.1.0
     # via -r requirements.in
 idna==3.2
     # via requests
-ipython==7.28.0
+ipython==8.9.0
     # via -r requirements.in
 jedi==0.18.0
     # via ipython
