@@ -74,7 +74,7 @@ matplotlib-inline==0.1.3
     # via ipython
 mccabe==0.6.1
     # via flake8
-model-bakery==1.3.2
+model-bakery==1.14.0
     # via -r requirements-dev.in
 packaging==21.0
     # via pytest
