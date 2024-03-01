@@ -73,7 +73,7 @@ ptyprocess==0.7.0
     # via pexpect
 pygments==2.10.0
     # via ipython
-python-dateutil==2.8.2
+python-dateutil==2.9.0
     # via botocore
 python-decouple==3.5
     # via -r requirements.in
