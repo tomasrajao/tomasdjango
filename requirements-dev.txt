@@ -110,7 +110,7 @@ pytest-cov==2.12.1
     # via -r requirements-dev.in
 pytest-django==4.4.0
     # via -r requirements-dev.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0
     # via botocore
 python-decouple==3.5
     # via -r requirements.in
