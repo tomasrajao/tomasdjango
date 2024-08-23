@@ -47,7 +47,7 @@ django-storages==1.11.1
     #   django-s3-folder-storage
 gunicorn==20.1.0
     # via -r requirements.in
-idna==3.2
+idna==3.8
     # via requests
 ipython==7.28.0
     # via -r requirements.in
