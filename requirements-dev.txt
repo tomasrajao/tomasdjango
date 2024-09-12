@@ -140,7 +140,7 @@ traitlets==5.1.0
     #   matplotlib-inline
 typing-extensions==3.10.0.2
     # via collectfast
-urllib3==1.26.7
+urllib3==2.2.3
     # via
     #   botocore
     #   requests
