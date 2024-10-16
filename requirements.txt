@@ -67,7 +67,7 @@ pickleshare==0.7.5
     # via ipython
 prompt-toolkit==3.0.20
     # via ipython
-psycopg2-binary==2.9.1
+psycopg2-binary==2.9.10
     # via -r requirements.in
 ptyprocess==0.7.0
     # via pexpect
